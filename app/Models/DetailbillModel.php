@@ -21,4 +21,10 @@ class DetailbillModel extends Model
     'preparation',
     'import'
   ];
+  public function Bill () {
+      return $this->belongsTo('App\Models\BillModel');
+  }
+  public function Drinks () {
+      return $this->belongsTo('App\Models\DrinksModel');
+  }
 }

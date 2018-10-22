@@ -17,4 +17,10 @@ class BillModel extends Model
     'id',
     'table_id',
   ];
+  public function Table () {
+      return $this->belongsTo('App\Models\TableModel');
+  }
+  public function DetailBill () {
+      return $this->hasMany('App\Models\DetailbillModel', 'bill_id');
+  }
 }

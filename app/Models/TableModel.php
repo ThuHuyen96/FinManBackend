@@ -19,4 +19,10 @@ class TableModel extends Model
     'area',
     'status'
   ];
+  public function Bill () {
+      return $this->hasMany('App\Models\BillModel', 'table_id');
+  }
+  public function Area () {
+      return $this->belongsTo('App\Models\AreasModel');
+  }
 }

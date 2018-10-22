@@ -18,4 +18,7 @@ class AreasModel extends Model
     'name',
     'status'
   ];
+  public function Table () {
+      return $this->hasMany('App\Models\TableModel', 'area');
+  }
 }

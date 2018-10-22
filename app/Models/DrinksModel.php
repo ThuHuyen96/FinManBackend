@@ -22,4 +22,7 @@ class DrinksModel extends Model
     'images',
     'status',
   ];
+  public function DetailBill () {
+      return $this->hasMany('App\Models\DetailbillModel', 'drinks_id');
+  }
 }
